@@ -1,16 +1,58 @@
-.signature-preview {
-  height: 36px;
-  border: 1px solid hsl(0, 0%, 0%);
+$signature-preview-background-color:          hsl(201, 69%, 46%);
+$signature-preview-font-family:               "Pixel-Art";
+$signature-preview-font-size:                 14px;
+$signature-preview-text-color:                #ffffff;
+$signature-preview-border-color:              #000000;
 
-  > .character-name {
-    display: inline-block;
+.signature-preview {
+  display: flex;
+  position: relative;
+  border: 1px solid $signature-preview-border-color;
+  background: $signature-preview-background-color;
+  padding: 6px;
+  width: 400px;
+  height: 32px;
+  // text-transform: uppercase;
+  color: $signature-preview-text-color;
+  // font-family: $signature-preview-font-family;
+  font-size: $signature-preview-font-size;
+  align-items: center;
+  // -webkit-font-smoothing: none;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid $signature-preview-text-color;
+    content: "";
   }
 
-  > .clan-name {
-    display: inline-block;
+  > * {
+    box-sizing: border-box;
+    max-height: 100%;
+  }
 
-    &:before {
-      content: '-';
-    }
+  > .character-name {
+
+  }
+
+  > .clan-logo {
+    margin-right: 6px;
+  }
+
+  > .message {
+    flex: 1 1 0%;
+    text-align: right;
+  }
+}
+
+.clan-logo {
+  width: 16px;
+  height: 12px;
+
+  &.alliance {
+    width: 24px;
   }
 }

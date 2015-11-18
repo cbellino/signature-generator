@@ -1,11 +1,15 @@
 <div class="signature-preview">
 
+  {{#if signature.clanImage}}
+    <img class="clan-logo alliance" src="{{signature.clanImage}}">
+  {{/if}}
+
   {{#if signature.characterName}}
     <div class="character-name">{{signature.characterName}}</div>
   {{/if}}
 
-  {{#if signature.clanName}}
-    <div class="clan-name">{{signature.clanName}}</div>
+  {{#if signature.message}}
+    <div class="message">{{signature.message}}</div>
   {{/if}}
 
 </div>

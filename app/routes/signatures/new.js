@@ -8,7 +8,8 @@ export default Ember.Route.extend({
       newSignature: store.createRecord('signature', {
         characterName: 'Aperow',
         clanName: 'Dregomorn',
-        message: 'lolNecrolol',
+        clanImage: '/images/crests/dgm_24x12.png',
+        message: 'Necromancer 40+',
       })
     });
   }
