@@ -1,0 +1,16 @@
+.signature-preview {
+  height: 36px;
+  border: 1px solid hsl(0, 0%, 0%);
+
+  > .character-name {
+    display: inline-block;
+  }
+
+  > .clan-name {
+    display: inline-block;
+
+    &:before {
+      content: '-';
+    }
+  }
+}
