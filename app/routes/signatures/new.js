@@ -1,19 +1,24 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    model: function() {
-    let store = this.store;
+  model: function() {
+    let store = this.get('store');
+
+    let signatureBackgrounds = store.findAll('signature_background');
+    let newSignature = store.createRecord('signature', {
+      characterName: 'Aperow',
+      clanName: 'Dregomorn',
+      clanImage: '/images/crests/dgm_24x12.png',
+      message: 'Rigolus party',
+    });
+
+    signatureBackgrounds.then(function (backgrounds) {
+      newSignature.set('background', backgrounds.get('firstObject'));
+    });
 
     return Ember.RSVP.hash({
-      newSignature: store.createRecord('signature', {
-        characterName: 'Aperow',
-        clanName: 'Dregomorn',
-        clanImage: '/images/crests/dgm_24x12.png',
-        message: 'Rigolus party',
-        textColor: '#000000',
-        backgroundColor: '#f9f2c4',
-        backgroundImage: '/images/backgrounds/background_1.png',
-      })
+      backgrounds: signatureBackgrounds,
+      newSignature: newSignature,
     });
   }
 });

@@ -10,6 +10,7 @@ $signature-preview-border-color:              #000000;
   align-items: center;
   border: 1px solid $signature-preview-border-color;
   background: $signature-preview-background-color;
+  background-size: 100% auto;
   padding: 6px 10px;
   width: 400px;
   height: 32px;
@@ -53,5 +54,11 @@ $signature-preview-border-color:              #000000;
 
   &.alliance {
     width: 24px;
+  }
+}
+
+.ember-radio-button {
+  img {
+    width: 80%;
   }
 }

@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="columns small-3">
+  <div class="columns small-4">
 
     <label>
       <span>Character</span>
@@ -7,7 +7,7 @@
     </label>
 
   </div>
-  <div class="columns small-6">
+  <div class="columns small-8">
 
     <label>
       <span>Message</span>
@@ -15,28 +15,23 @@
     </label>
 
   </div>
-  <div class="columns small-3">
+</div>
 
-    {{!-- <label>
-      <span>Color</span>
-      {{input type="text" value=signature.backgroundColor}}
-    </label> --}}
+<div class="row">
 
-    {{#radio-button
-      value="/images/backgrounds/background_1.png"
-      groupValue=signature.backgroundImage
-      changed="backgroundChanged"
-    }}
-      Background 1
-    {{/radio-button}}
+  <fieldset class="small-6 columns">
+    <legend>Background</legend>
 
-    {{#radio-button
-      value="/images/backgrounds/background_2.png"
-      groupValue=signature.backgroundImage
-      changed="backgroundChanged"
-    }}
-      Background 2
-    {{/radio-button}}
+    {{#each backgrounds as |background|}}
+      {{#radio-button
+        value=background.id
+        name="background"
+        groupValue=currentBackgroundId
+        changed="backgroundChanged"
+      }}
+        <img src="{{background.image}}" alt="Background #{{background.id}}"/>
+      {{/radio-button}}
+    {{/each}}
+  </fieldset>
 
-  </div>
 </div>

@@ -1,21 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  initBackgroundId: function () {
+    this.set('currentBackgroundId', this.get('signature.background.id'));
+  }.on('init'),
+
   actions: {
-    backgroundChanged (value) {
-      // TODO: replace this with a signature_background object containing:
-      // - text color
-      // - background color
-      // - background image
-      // - dimensions
-      // - etc
-      let textColor = '#000000';
-
-      if (value.match('background_2.png')) {
-        textColor = '#ffffff';
-      }
-
-      this.set('signature.textColor', textColor);
+    backgroundChanged (id) {
+      let background = this.get('backgrounds').findBy('id', id);
+      this.set('signature.background', background);
     }
   }
 });
