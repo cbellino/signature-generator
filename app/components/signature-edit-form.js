@@ -11,7 +11,7 @@ export default Ember.Component.extend({
       // - etc
       let textColor = '#000000';
 
-      if (value === 'background_2.png') {
+      if (value.match('background_2.png')) {
         textColor = '#ffffff';
       }
 

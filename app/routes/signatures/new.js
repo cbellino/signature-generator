@@ -12,7 +12,7 @@ export default Ember.Route.extend({
         message: 'Rigolus party',
         textColor: '#000000',
         backgroundColor: '#f9f2c4',
-        backgroundImage: 'background_1.png',
+        backgroundImage: '/images/backgrounds/background_1.png',
       })
     });
   }
