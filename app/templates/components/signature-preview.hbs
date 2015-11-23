@@ -1,4 +1,10 @@
-<div class="signature-preview" style="background-color: {{signature.color}}">
+<div
+  class="signature-preview"
+  style="
+    color: {{signature.textColor}};
+    background-color: {{signature.backgroundColor}};
+    background-image: url('/images/backgrounds/{{signature.backgroundImage}}');
+">
 
   {{#if signature.clanImage}}
     <img class="clan-logo alliance" src="{{signature.clanImage}}">

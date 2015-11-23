@@ -1,7 +1,5 @@
-
-
 <div class="row">
-  <div class="columns small-4">
+  <div class="columns small-3">
 
     <label>
       <span>Character</span>
@@ -17,12 +15,28 @@
     </label>
 
   </div>
-  <div class="columns small-2">
+  <div class="columns small-3">
 
-    <label>
+    {{!-- <label>
       <span>Color</span>
-      {{input type="text" value=signature.color}}
-    </label>
+      {{input type="text" value=signature.backgroundColor}}
+    </label> --}}
+
+    {{#radio-button
+      value="background_1.png"
+      groupValue=signature.backgroundImage
+      changed="backgroundChanged"
+    }}
+      Background 1
+    {{/radio-button}}
+
+    {{#radio-button
+      value="background_2.png"
+      groupValue=signature.backgroundImage
+      changed="backgroundChanged"
+    }}
+      Background 2
+    {{/radio-button}}
 
   </div>
 </div>

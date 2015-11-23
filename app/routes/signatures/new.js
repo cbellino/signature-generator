@@ -10,7 +10,9 @@ export default Ember.Route.extend({
         clanName: 'Dregomorn',
         clanImage: '/images/crests/dgm_24x12.png',
         message: 'Rigolus party',
-        color: '#248ec6'
+        textColor: '#000000',
+        backgroundColor: '#f9f2c4',
+        backgroundImage: 'background_1.png',
       })
     });
   }
