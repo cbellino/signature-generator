@@ -4,4 +4,5 @@ export default DS.Model.extend({
   characterName: DS.attr(),
   clanName: DS.attr(),
   clanImage: DS.attr(),
+  color: DS.attr(),
 });

@@ -9,7 +9,8 @@ export default Ember.Route.extend({
         characterName: 'Aperow',
         clanName: 'Dregomorn',
         clanImage: '/images/crests/dgm_24x12.png',
-        message: 'Necromancer 40+',
+        message: 'Rigolus party',
+        color: '#248ec6'
       })
     });
   }

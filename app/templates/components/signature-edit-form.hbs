@@ -1,14 +1,28 @@
-<label>
-  <span>Character</span>
-  {{input type="text" value=signature.characterName}}
-</label>
 
-<label>
-  <span>Clan</span>
-  {{input type="text" value=signature.clanName}}
-</label>
 
-<label>
-  <span>Message</span>
-  {{input type="text" value=signature.message}}
-</label>
+<div class="row">
+  <div class="columns small-4">
+
+    <label>
+      <span>Character</span>
+      {{input type="text" value=signature.characterName}}
+    </label>
+
+  </div>
+  <div class="columns small-6">
+
+    <label>
+      <span>Message</span>
+      {{input type="text" value=signature.message}}
+    </label>
+
+  </div>
+  <div class="columns small-2">
+
+    <label>
+      <span>Color</span>
+      {{input type="text" value=signature.color}}
+    </label>
+
+  </div>
+</div>
