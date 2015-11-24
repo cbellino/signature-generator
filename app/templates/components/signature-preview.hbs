@@ -1,6 +1,7 @@
 <div
   class="signature-preview"
-  style={{signature.previewStyle}}>
+  style={{signature.previewStyle}}
+>
 
   {{#if signature.clanImage}}
     <img class="clan-logo alliance" src="{{signature.clanImage}}">
@@ -15,3 +16,11 @@
   {{/if}}
 
 </div>
+
+<hr>
+
+<div class="signature-tag">
+  <input type="text">
+</div>
+
+<button {{action "generateTags"}}>generate tag</button>
