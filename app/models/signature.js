@@ -6,6 +6,15 @@ export default DS.Model.extend({
   clanName: DS.attr(),
   clanImage: DS.attr(),
   background: DS.belongsTo('signature_background'),
+  base64: DS.attr(),
+
+  urlEncoded: Ember.computed('base64', function() {
+    return encodeURIComponent(this.get('base64'));
+  }),
+
+  bbcode: Ember.computed('urlEncoded', function() {
+    return `[img]http://localhost:5000/?data=${this.get('urlEncoded')}[/img]`;
+  }),
 
   previewStyle: Ember.computed('background', function () {
     let styles = [];
@@ -27,4 +36,5 @@ export default DS.Model.extend({
 
     return new Ember.Handlebars.SafeString(styles.join('; '));
   }),
+
 });

@@ -1,19 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  signatureTag1: '',
+  updateTags (canvas) {
+    // TODO: this does not work after the first time
+    this.set('signature.base64', canvas.toDataURL());
+  },
+
   actions: {
     generateTags () {
       // TODO: clean this up.
       var signaturePreview = document.querySelector('.signature-preview');
-      var signatureTagInput1 = document.querySelector('.signature-tag input:first-child');
 
       window.html2canvas(signaturePreview, {
-        onrendered: function(canvas) {
-          var dataURL = canvas.toDataURL();
-
-          // TODO: do this the ember way.
-          signatureTagInput1.value = dataURL;
-        }
+        onrendered: this.updateTags.bind(this)
       });
     }
   }

@@ -20,7 +20,9 @@
 <hr>
 
 <div class="signature-tag">
-  <input type="text">
+  <input type="text" value="{{signature.bbcode}}">
 </div>
 
-<button {{action "generateTags"}}>generate tag</button>
+<div>
+  <button {{action "generateTags"}} class="button">Generate tag</button>
+</div>
