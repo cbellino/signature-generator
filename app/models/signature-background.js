@@ -23,6 +23,12 @@ SignatureBackground.reopenClass({
       "textColor": "#ffffff",
       "image": "/images/backgrounds/background_3.png",
       "padding": { "right": "40px" },
+    },
+    {
+      "id": 4,
+      "textColor": "#ffffff",
+      "image": "/images/backgrounds/background_4.jpg",
+      "padding": { "right": "56px" },
     }
   ]
 });

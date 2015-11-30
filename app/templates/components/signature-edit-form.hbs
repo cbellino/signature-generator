@@ -1,4 +1,5 @@
 <div class="row">
+
   <div class="columns small-4">
 
     <label>
@@ -7,6 +8,7 @@
     </label>
 
   </div>
+
   <div class="columns small-8">
 
     <label>
@@ -15,23 +17,19 @@
     </label>
 
   </div>
-</div>
 
-<div class="row">
-
-  <fieldset class="small-6 columns">
-    <legend>Background</legend>
+  <div class="small-12 columns">
 
     {{#each backgrounds as |background|}}
-      {{#radio-button
-        value=background.id
-        name="background"
-        groupValue=currentBackgroundId
-        changed="backgroundChanged"
-      }}
-        <img src="{{background.image}}" alt="Background #{{background.id}}"/>
-      {{/radio-button}}
+      <div class="dgm-background">
+        <img
+          src="{{background.image}}"
+          alt="Background #{{background.id}}"
+          {{action "backgroundChanged" background}}
+        />
+      </div>
     {{/each}}
-  </fieldset>
+
+  </div>
 
 </div>

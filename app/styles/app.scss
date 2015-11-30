@@ -34,10 +34,6 @@ $signature-preview-border-color:              #000000;
     max-height: 100%;
   }
 
-  > .character-name {
-
-  }
-
   > .clan-logo {
     margin-right: 8px;
   }
@@ -52,13 +48,12 @@ $signature-preview-border-color:              #000000;
   width: 16px;
   height: 12px;
 
-  &.alliance {
-    width: 24px;
-  }
+  // &.alliance {
+  //   width: 24px;
+  // }
 }
 
-.ember-radio-button {
-  img {
-    width: 80%;
-  }
+.dgm-background {
+  margin-bottom: 8px;
+  border: 1px solid transparent;
 }

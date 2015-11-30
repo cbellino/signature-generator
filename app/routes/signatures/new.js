@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     let newSignature = store.createRecord('signature', {
       characterName: 'Aperow',
       clanName: 'Dregomorn',
-      clanImage: '/images/crests/dgm_24x12.png',
+      clanImage: '/images/crests/dgm-crest-dark-16x12.png',
       message: 'Rigolus party',
     });
 

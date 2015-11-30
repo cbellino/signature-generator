@@ -3,10 +3,10 @@
   style={{signature.previewStyle}}
 >
 
-  {{#if signature.clanImage}}
+{{!--   {{#if signature.clanImage}}
     <img class="clan-logo alliance" src="{{signature.clanImage}}">
   {{/if}}
-
+ --}}
   {{#if signature.characterName}}
     <div class="character-name">{{signature.characterName}}</div>
   {{/if}}
@@ -15,14 +15,4 @@
     <div class="message">{{signature.message}}</div>
   {{/if}}
 
-</div>
-
-<hr>
-
-<div class="signature-tag">
-  <input type="text" value="{{signature.bbcode}}">
-</div>
-
-<div>
-  <button {{action "generateTags"}} class="button">Generate tag</button>
 </div>
