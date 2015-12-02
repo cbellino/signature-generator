@@ -1,22 +1,20 @@
 import {Component, CORE_DIRECTIVES} from 'angular2/angular2';
 
-import {NameList} from '../../services/name_list';
+import {SignatureEditFormCmp} from '../signature-edit-form/signature-edit-form';
+import {SignaturePreviewCmp} from '../signature-preview/signature-preview';
 
 @Component({
   selector: 'about',
   templateUrl: './components/about/about.html',
-  directives: [CORE_DIRECTIVES]
+  directives: [CORE_DIRECTIVES, SignatureEditFormCmp, SignaturePreviewCmp]
 })
 export class AboutCmp {
-  constructor(public list: NameList) {
-  }
- /*
- * @param newname  any text as input.
- * @returns return false to prevent default form submit behavior to refresh the page.
- */
-  addName(newname): boolean {
-    this.list.add(newname.value);
-    newname.value = '';
-    return false;
+  signature: any;
+
+  constructor() {
+    this.signature = {
+      character: 'Aperow',
+      title: 'Rigolus party'
+    };
   }
 }
