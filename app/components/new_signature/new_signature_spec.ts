@@ -7,11 +7,11 @@ import {
 } from 'angular2/testing';
 import {Component, View} from 'angular2/angular2';
 import {DOM} from 'angular2/src/core/dom/dom_adapter';
-import {AboutCmp} from './about';
+import {NewSignatureCmp} from './new_signature';
 import {NameList} from '../../services/name_list';
 
 export function main() {
-  describe('About component', () => {
+  describe('NewSignature component', () => {
     it('should work',
       injectAsync([TestComponentBuilder], (tcb: TestComponentBuilder) => {
         return tcb.overrideTemplate(TestComponent, '<div><about></about></div>')
@@ -42,5 +42,5 @@ export function main() {
 }
 
 @Component({providers: [NameList], selector: 'test-cmp'})
-@View({directives: [AboutCmp]})
+@View({directives: [NewSignatureCmp]})
 class TestComponent {}

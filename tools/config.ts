@@ -21,9 +21,9 @@ export const TEST_DEST            = 'test';
 export const DOCS_DEST            = 'docs';
 export const APP_DEST             = `dist/${ENV}`;
 export const ASSETS_DEST          = `${APP_DEST}/assets`;
-export const CSS_DEST             = `${APP_DEST}/css`;
+export const CSS_DEST             = `${APP_DEST}/styles`;
 export const FONTS_DEST           = `${APP_DEST}/fonts`;
-export const LIB_DEST             = `${APP_DEST}/lib`;
+export const LIB_DEST             = `${APP_DEST}/libs`;
 export const VERSION              = appVersion();
 
 export const VERSION_NPM          = '3.0.0';
@@ -41,10 +41,6 @@ export const DEV_DEPENDENCIES = [
   { src: 'angular2/bundles/angular2.dev.js', dest: LIB_DEST, inject: 'libs' },
   { src: 'angular2/bundles/router.dev.js', dest: LIB_DEST, inject: 'libs' },
   { src: 'angular2/bundles/http.dev.js', dest: LIB_DEST, inject: 'libs' },
-
-  { src: 'bootstrap/dist/css/bootstrap.css', dest: CSS_DEST, inject: true },
-
-  { src: 'bootstrap/dist/fonts/**/*', dest: FONTS_DEST}
 ];
 
 DEV_DEPENDENCIES
@@ -52,7 +48,8 @@ DEV_DEPENDENCIES
   .forEach(d => d.src = require.resolve(d.src));
 
 export const APP_ASSETS = [
-  { src: `${ASSETS_DEST}/main.css`, inject: true, dest: ASSETS_DEST }
+  // { src: `${ASSETS_DEST}/main.css`, inject: true, dest: ASSETS_DEST }
+  { src: `${APP_DEST}/components/app/app.css`, inject: true, dest: CSS_DEST }
 ];
 
 export const SYSTEM_CONFIG = {

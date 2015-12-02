@@ -1,14 +1,14 @@
 import {Component, CORE_DIRECTIVES} from 'angular2/angular2';
 
-import {SignatureEditFormCmp} from '../signature-edit-form/signature-edit-form';
-import {SignaturePreviewCmp} from '../signature-preview/signature-preview';
+import {SignatureEditFormCmp} from '../signature_edit_form/signature_edit_form';
+import {SignaturePreviewCmp} from '../signature_preview/signature_preview';
 
 @Component({
-  selector: 'about',
-  templateUrl: './components/about/about.html',
+  selector: 'new-signature',
+  templateUrl: './components/new_signature/new_signature.html',
   directives: [CORE_DIRECTIVES, SignatureEditFormCmp, SignaturePreviewCmp]
 })
-export class AboutCmp {
+export class NewSignatureCmp {
   signature: any;
 
   constructor() {

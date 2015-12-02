@@ -5,18 +5,17 @@ import {
 } from 'angular2/router';
 // import {HTTP_PROVIDERS} from 'http/http';
 
-import {AboutCmp} from '../about/about';
-import {NameList} from '../../services/name_list';
+import {NewSignatureCmp} from '../new_signature/new_signature';
 
 @Component({
   selector: 'app',
-  viewProviders: [NameList],
+  viewProviders: [],
   templateUrl: './components/app/app.html',
   styleUrls: ['./components/app/app.css'],
   encapsulation: ViewEncapsulation.None,
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  { path: '/', component: AboutCmp, as: 'About' }
+  { path: '/', component: NewSignatureCmp, as: 'NewSignature' }
 ])
 export class AppCmp {}

@@ -1,0 +1,36 @@
+$signature-preview-background-color:          hsl(201, 69%, 46%);
+$signature-preview-font-family:               "Arial";
+$signature-preview-font-size:                 13px;
+$signature-preview-text-color:                #ffffff;
+$signature-preview-border-color:              #000000;
+
+signature-preview {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border: 1px solid $signature-preview-border-color;
+  background: $signature-preview-background-color;
+  background-size: 100% auto;
+  padding: 6px 10px;
+  width: 400px;
+  height: 32px;
+  text-transform: uppercase;
+  color: $signature-preview-text-color;
+  font-family: $signature-preview-font-family;
+  font-size: $signature-preview-font-size;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid $signature-preview-text-color;
+    content: "";
+  }
+
+  > * {
+    box-sizing: border-box;
+    max-height: 100%;
+  }
+}
