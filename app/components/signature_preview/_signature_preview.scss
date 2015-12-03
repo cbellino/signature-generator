@@ -38,13 +38,18 @@ signature-preview {
   }
 
   > .signature-character {
-    top: 11px;
-    right: 12px;
+    top: 12px;
+    right: 60px;
   }
 
   > .signature-secondary-area {
+    right: 60px;
+    bottom: 12px;
+  }
+
+  > .signature-icon {
+    top: 14px;
     right: 12px;
-    bottom: 11px;
   }
 }
 
@@ -52,6 +57,11 @@ signature-preview {
   > :last-child:before {
     content: " - ";
   }
+}
+
+.signature-icon {
+  border: 1px solid $signature-preview-text-color;
+  padding: 1px;
 }
 
 .signature-character {

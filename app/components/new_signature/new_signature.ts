@@ -16,8 +16,8 @@ export class NewSignatureCmp {
       character: 'Aperow',
       title: 'Rigolus party',
       site: 'dregomorn.fr',
-      url: 'http://www.dregomorn.fr',
-      clan: 'Dregomorn'
+      clanUrl: 'http://www.dregomorn.fr',
+      iconUrl: 'http://lineage.pmfun.com/data/img/skill1263_0.png'
     };
   }
 }
