@@ -3,7 +3,11 @@ $signature-preview-font-family:               $banner-font-family;
 $signature-preview-font-size:                 13px;
 $signature-preview-text-color:                #ffffff;
 $signature-preview-border-color:              #000000;
-$signature-preview-background-url:            "assets/images/signature_background.jpg";
+$signature-preview-second-border-color:       #00adc7;
+// $signature-preview-background-url:            "assets/images/signature_background.jpg";
+$signature-preview-width:                     520px;
+$signature-preview-height:                    120px;
+$signature-preview-background-url:            "assets/images/signature_background_large.jpg";
 $signature-preview-text-weight:               300;
 
 signature-preview {
@@ -15,8 +19,8 @@ signature-preview {
   background-image: url($signature-preview-background-url);
   background-size: 100% auto;
   padding: 0;
-  width: 400px;
-  height: 64px;
+  width: $signature-preview-width;
+  height: $signature-preview-height;
   text-transform: uppercase;
   color: $signature-preview-text-color;
   font-family: $signature-preview-font-family;
@@ -28,7 +32,7 @@ signature-preview {
     right: 0;
     bottom: 0;
     left: 0;
-    border: 1px solid $signature-preview-text-color;
+    border: 1px solid $signature-preview-second-border-color;
     content: "";
   }
 
@@ -38,39 +42,36 @@ signature-preview {
   }
 
   > .signature-character {
-    top: 12px;
-    right: 60px;
+    top: 16px;
+    right: 16px;
   }
 
-  > .signature-secondary-area {
-    right: 60px;
-    bottom: 12px;
+  > .signature-title {
+    right: 16px;
+    top: 40px;
+  }
+
+  > .signature-clan {
+    right: 16px;
+    bottom: 16px;
   }
 
   > .signature-icon {
-    top: 14px;
-    right: 12px;
+    display: none;
+    // top: 14px;
+    // right: 12px;
   }
-}
-
-.signature-secondary-area {
-  > :last-child:before {
-    content: " - ";
-  }
-}
-
-.signature-icon {
-  border: 1px solid $signature-preview-text-color;
-  padding: 1px;
 }
 
 .signature-character {
-  font-size: 1.3em;
-  font-weight: $signature-preview-text-weight;
+  line-height: 100%;
+  font-size: 1.6em;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
 }
 
 .signature-title {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: $signature-preview-text-weight;
 }
 
@@ -78,6 +79,6 @@ signature-preview {
   outline: none;
   text-decoration: none;
   color: $signature-preview-text-color;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: $signature-preview-text-weight;
 }
