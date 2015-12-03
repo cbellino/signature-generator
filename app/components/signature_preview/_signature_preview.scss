@@ -4,6 +4,7 @@ $signature-preview-font-size:                 13px;
 $signature-preview-text-color:                #ffffff;
 $signature-preview-border-color:              #000000;
 $signature-preview-background-url:            "assets/images/signature_background.jpg";
+$signature-preview-text-weight:               300;
 
 signature-preview {
   display: block;
@@ -32,32 +33,41 @@ signature-preview {
   }
 
   > * {
+    position: absolute;
     z-index: 2;
   }
 
-  > .character {
-    position: absolute;
-    right: 8px;
-    top: 8px;
+  > .signature-character {
+    top: 11px;
+    right: 12px;
   }
 
-  > .title {
-    display: none;
-  }
-
-  > .clan-link {
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
+  > .signature-secondary-area {
+    right: 12px;
+    bottom: 11px;
   }
 }
 
-.clan-link {
-  color: $signature-preview-text-color;
-  text-decoration: none;
-  outline: none;
-
-  &:focus {
-    text-decoration: underline;
+.signature-secondary-area {
+  > :last-child:before {
+    content: " - ";
   }
+}
+
+.signature-character {
+  font-size: 1.3em;
+  font-weight: $signature-preview-text-weight;
+}
+
+.signature-title {
+  font-size: 1em;
+  font-weight: $signature-preview-text-weight;
+}
+
+.signature-clan {
+  outline: none;
+  text-decoration: none;
+  color: $signature-preview-text-color;
+  font-size: 1em;
+  font-weight: $signature-preview-text-weight;
 }
