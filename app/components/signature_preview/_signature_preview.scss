@@ -1,19 +1,21 @@
-$signature-preview-background-color:          hsl(201, 69%, 46%);
-$signature-preview-font-family:               "Arial";
+$signature-preview-background-color:          #000000;
+$signature-preview-font-family:               $banner-font-family;
 $signature-preview-font-size:                 13px;
 $signature-preview-text-color:                #ffffff;
 $signature-preview-border-color:              #000000;
+$signature-preview-background-url:            "assets/images/signature_background.jpg";
 
 signature-preview {
-  display: flex;
+  display: block;
   position: relative;
-  align-items: center;
+  box-sizing: border-box;
   border: 1px solid $signature-preview-border-color;
   background: $signature-preview-background-color;
+  background-image: url($signature-preview-background-url);
   background-size: 100% auto;
-  padding: 6px 10px;
+  padding: 0;
   width: 400px;
-  height: 32px;
+  height: 64px;
   text-transform: uppercase;
   color: $signature-preview-text-color;
   font-family: $signature-preview-font-family;
@@ -30,7 +32,32 @@ signature-preview {
   }
 
   > * {
-    box-sizing: border-box;
-    max-height: 100%;
+    z-index: 2;
+  }
+
+  > .character {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+
+  > .title {
+    display: none;
+  }
+
+  > .clan-link {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+  }
+}
+
+.clan-link {
+  color: $signature-preview-text-color;
+  text-decoration: none;
+  outline: none;
+
+  &:focus {
+    text-decoration: underline;
   }
 }

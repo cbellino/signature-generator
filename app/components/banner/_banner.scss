@@ -1,0 +1,26 @@
+// TODO: load this font
+$banner-font-family:        $font-family;
+
+$banner-background-color:   #0090c4;
+$banner-border-color:       darken($banner-background-color, 3);
+$banner-title-color:        #ffffff;
+
+banner {
+  display: block;
+  box-sizing: border-box;
+  border-bottom: 1px solid $banner-border-color;
+  background: $banner-background-color;
+  padding: 88px 0 0;
+  height: 256px;
+  font-family: $banner-font-family;
+
+  h1 {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1000px;
+    line-height: 1.5;
+    color: $banner-title-color;
+    font-size: 56px;
+    font-weight: 400;
+  }
+}

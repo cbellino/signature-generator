@@ -1,0 +1,16 @@
+html,
+body,
+app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+$app-background-color: rgba(74, 74, 74, 0.1);
+
+app {
+  display: block;
+  background: $app-background-color;
+}

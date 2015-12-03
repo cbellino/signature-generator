@@ -14,7 +14,10 @@ export class NewSignatureCmp {
   constructor() {
     this.signature = {
       character: 'Aperow',
-      title: 'Rigolus party'
+      title: 'Rigolus party',
+      site: 'dregomorn.fr',
+      url: 'http://www.dregomorn.fr',
+      clan: 'Dregomorn'
     };
   }
 }

@@ -5,6 +5,7 @@ import {
 } from 'angular2/router';
 // import {HTTP_PROVIDERS} from 'http/http';
 
+import {BannerCmp} from '../banner/banner';
 import {NewSignatureCmp} from '../new_signature/new_signature';
 
 @Component({
@@ -13,7 +14,7 @@ import {NewSignatureCmp} from '../new_signature/new_signature';
   templateUrl: './components/app/app.html',
   styleUrls: ['./components/app/app.css'],
   encapsulation: ViewEncapsulation.None,
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES, BannerCmp]
 })
 @RouteConfig([
   { path: '/', component: NewSignatureCmp, as: 'NewSignature' }
