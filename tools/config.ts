@@ -6,7 +6,7 @@ import {argv} from 'yargs';
 // Configuration.
 export const ENV                  = argv['env']         || 'dev';
 export const DEBUG                = argv['debug']       || false;
-export const PORT                 = argv['port']        || 5555;
+export const PORT                 = argv['port']        || 5000;
 export const LIVE_RELOAD_PORT     = argv['reload-port'] || 4002;
 export const DOCS_PORT            = argv['docs-port']   || 4003;
 export const APP_BASE             = argv['base']        || '/';
@@ -15,6 +15,8 @@ export const APP_TITLE            = 'Signature generator';
 
 export const APP_SRC              = 'app';
 export const ASSETS_SRC           = `${APP_SRC}/assets/**/*`;
+
+export const DIST_PATH            = '/';
 
 export const TOOLS_DIR            = 'tools';
 export const TEST_DEST            = 'test';
@@ -48,14 +50,13 @@ DEV_DEPENDENCIES
   .forEach(d => d.src = require.resolve(d.src));
 
 export const APP_ASSETS = [
-  // { src: `${ASSETS_DEST}/main.css`, inject: true, dest: ASSETS_DEST }
-  { src: `${APP_DEST}/components/app/app.css`, inject: true, dest: CSS_DEST }
+  { src: `${DIST_PATH}components/app/app.css`, inject: true, dest: CSS_DEST }
 ];
 
 export const SYSTEM_CONFIG = {
   defaultJSExtensions: true,
   paths: {
-    '*': `${APP_BASE}node_modules/*`
+    '*': `${DIST_PATH}node_modules/*`
   }
 };
 

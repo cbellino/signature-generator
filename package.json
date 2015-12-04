@@ -74,7 +74,11 @@
     "typescript": "~1.6.0",
     "typescript-register": "^1.1.0",
     "yargs": "^3.25.0",
-    "zone.js": "^0.5.8"
+    "zone.js": "^0.5.8",
+    "express": "^4.13.3",
+    "gzippo": "^0.2.0",
+    "glob": "^4.5.3",
+    "morgan": "^1.6.1"
   },
   "dependencies": {
     "angular2": "2.0.0-alpha.46",
