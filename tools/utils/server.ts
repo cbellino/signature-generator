@@ -15,7 +15,6 @@ export function serveSPA() {
   tinylr.listen(LIVE_RELOAD_PORT);
 
   server.use(morgan('dev'));
-  console.log(__dirname + '/../../' + APP_DEST);
   server.use(gzippo.staticGzip(__dirname + '/../../' + APP_DEST));
   server.use(
     APP_BASE,

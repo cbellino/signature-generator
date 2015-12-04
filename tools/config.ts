@@ -15,6 +15,7 @@ export const APP_TITLE            = 'Signature generator';
 
 export const APP_SRC              = 'app';
 export const ASSETS_SRC           = `${APP_SRC}/assets/**/*`;
+export const NODE_MODULES_SRC     = 'node_modules';
 
 export const DIST_PATH            = '/';
 
