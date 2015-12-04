@@ -1,1 +1,13 @@
-$font-family: "RobotoDraft", "Roboto", "Arial";
+// Fonts
+$font-family:               "RobotoDraft", "Roboto", "Arial";
+
+// Basic colors.
+$background-color:          rgba(74, 74, 74, 0.1) !default;
+
+// Media queries breakpoints.
+$media-break-small:         600px !default;
+$media-break-medium:        1200px !default;
+$media-break-large:         1600px !default;
+
+// Card component.
+$card-background-color:     rgba(255, 255, 255, 1) !default;

@@ -47,8 +47,8 @@ signature-preview {
   }
 
   > .signature-title {
+    top: 42px;
     right: 16px;
-    top: 40px;
   }
 
   > .signature-clan {
@@ -65,7 +65,7 @@ signature-preview {
 
 .signature-character {
   line-height: 100%;
-  font-size: 1.6em;
+  font-size: 1.8em;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
@@ -73,6 +73,7 @@ signature-preview {
 .signature-title {
   font-size: 1.2em;
   font-weight: $signature-preview-text-weight;
+  -webkit-font-smoothing: antialiased;
 }
 
 .signature-clan {
@@ -81,4 +82,5 @@ signature-preview {
   color: $signature-preview-text-color;
   font-size: 1.2em;
   font-weight: $signature-preview-text-weight;
+  -webkit-font-smoothing: antialiased;
 }
