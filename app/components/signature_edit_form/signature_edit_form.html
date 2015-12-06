@@ -1,13 +1,9 @@
-<div>
-  <input type="text" placeholder="Character" [(ng-model)]="signature.character" />
-  <input type="text" placeholder="Title" [(ng-model)]="signature.title" />
-</div>
+<md-input-container class="flex md-block md-input-has-placeholder">
+  <label for="character">Character</label>
+  <input [(ng-model)]="signature.character" id="character" class="md-input" />
+</md-input-container>
 
-<!-- <form (submit)="addName(newname)">
-  <input #newname>
-  <button type="submit">Add</button>
-</form>
-<ul>
-  <li *ng-for="#name of list.get()">{{name}}</li>
-</ul>
- -->
+<md-input-container class="flex md-block md-input-has-placeholder">
+  <label for="title">Title</label>
+  <input [(ng-model)]="signature.title" id="title" class="md-input" />
+</md-input-container>

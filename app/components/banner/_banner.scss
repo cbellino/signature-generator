@@ -1,6 +1,6 @@
 $banner-font-family:        $font-family;
 $banner-title-color:        #ffffff;
-$banner-background-color:   #0090c4;
+$banner-background-color:   $primary-color;
 $banner-border-color:       darken($banner-background-color, 3);
 
 banner {

@@ -1,0 +1,7 @@
+md-input-container:not(.md-input-has-value) input:not(:focus) {
+  color: inherit;
+}
+
+md-input-container input:focus {
+  border-bottom-color: $primary-color;
+}
