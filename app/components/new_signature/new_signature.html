@@ -1,3 +1,12 @@
 <signature-edit-form [signature]="signature"></signature-edit-form>
 
 <signature-preview [signature]="signature"></signature-preview>
+
+<div class="layout-row layout-align-end-start">
+  <button
+    (click)="save()"
+    class="md-primary md-raised md-button save-button"
+  >
+    <span>Save</span>
+  </button>
+</div>

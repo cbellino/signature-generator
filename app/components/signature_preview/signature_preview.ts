@@ -7,10 +7,5 @@ import {Component, Input, CORE_DIRECTIVES} from 'angular2/angular2';
 })
 export class SignaturePreviewCmp {
   @Input() signature: any;
-
   characterMaxLength: number = 10;
-
-  constructor() {
-    //
-  }
 }

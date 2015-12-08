@@ -2,4 +2,12 @@ new-signature {
   > signature-preview {
     margin: 0 auto;
   }
+
+  > .layout-row {
+    margin-top: 8px;
+
+    > .save-button {
+      margin-right: 0;
+    }
+  }
 }

@@ -1,5 +1,11 @@
+$input-border-color:    rgba(0,0,0,0.12);
+
 md-input-container:not(.md-input-has-value) input:not(:focus) {
   color: inherit;
+}
+
+md-input-container input {
+  border-bottom-color: $input-border-color;
 }
 
 md-input-container input:focus {

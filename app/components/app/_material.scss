@@ -1,0 +1,10 @@
+.md-button {
+  &.md-primary:not(.md-raised) {
+    color: $primary-color;
+  }
+
+  &.md-primary.md-raised {
+    background: $primary-color;
+    color: $white;
+  }
+}
