@@ -44,6 +44,8 @@ export const DEV_DEPENDENCIES = [
   { src: 'angular2/bundles/angular2.dev.js', dest: LIB_DEST, inject: 'libs' },
   { src: 'angular2/bundles/router.dev.js', dest: LIB_DEST, inject: 'libs' },
   { src: 'angular2/bundles/http.dev.js', dest: LIB_DEST, inject: 'libs' },
+
+  { src: 'html2canvas/dist/html2canvas.js', dest: LIB_DEST, inject: 'libs' },
 ];
 
 DEV_DEPENDENCIES

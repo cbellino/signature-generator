@@ -1,23 +1,12 @@
-import {html2canvas} from 'html2canvas/dist/html2canvas';
+declare var window: any;
 
 export class Canvas {
-  element: any;
 
-  create() {
-    this.element = document.querySelector('signature-preview');
-
-    if (!this.element) {
-      throw Error('No preview element to generate the canvas.');
-    }
+  getBase64FromElement(element: Element): Promise<string> {
+    return window.html2canvas(element).then(this.canvasToBase64);
   }
 
-  open() {
-    console.log('open', this.element, html2canvas);
-
-    html2canvas(this.element, {
-      onrendered: (canvas) => {
-        console.log('onrendered');
-      }
-    });
+  private canvasToBase64(canvas: HTMLCanvasElement): string {
+    return canvas.toDataURL();
   }
 }
