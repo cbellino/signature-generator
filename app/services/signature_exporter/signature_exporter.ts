@@ -21,9 +21,7 @@ export class SignatureExporter {
     this.options = options;
   }
 
-  getBase64() {
-    // TODO: Use promises.
-    let data = this.source.getBase64FromElement(this.options.element);
-    return data;
+  getBase64(): Promise<string> {
+    return this.source.getBase64FromElement(this.options.element);
   }
 }

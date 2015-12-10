@@ -28,16 +28,17 @@ export class NewSignatureCmp {
     });
   }
 
-  save() {
+  save(): void {
     this.exporter.getBase64().then(this.openImage);
   }
 
-  private openImage(data: string) {
-    // TODO: open a new window with the image
-    // More info: http://stackoverflow.com/questions/5403709/convert-canvas-to-image-and-open-in-new-window-using-ruby-on-rails-and-javascrip
+  private openImage(data: string): void {
+    let image = new Image();
 
-    // let newWindow = window.open();
-    // console.log(window.open);
-    // newWindow.document.write(`<img src="${data}" />`);
+    image.src = data;
+    image.onload = function() {
+      let newWindow = window.open('', 'Your signature');
+      newWindow.document.write(image.outerHTML);
+    };
   }
 }
