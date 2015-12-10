@@ -4,7 +4,7 @@ export class Canvas {
 
   options: Object = {
     allowTaint: false,
-    logging: true,
+    logging: false,
     useCORS: true
   };
 
